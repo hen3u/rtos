@@ -1,0 +1,6 @@
+/ {
+	switch1: switch1 {
+		compatible = "my-switch";
+		gpios = <&gpiob 9 GPIO_ACTIVE_HIGH>;
+	};
+};

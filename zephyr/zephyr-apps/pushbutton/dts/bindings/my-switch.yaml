@@ -1,0 +1,9 @@
+description: Custom Input GPIO.
+
+compatible: "my-switch"
+
+properties:
+  gpios:
+    type: phandle-array
+    required: true
+    description: The input GPIO description.
