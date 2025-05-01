@@ -1,0 +1,25 @@
+/ {
+	switch1: switch1 {
+		compatible = "my-switch";
+		gpios = <&gpiob 9 GPIO_ACTIVE_HIGH>;
+	};
+
+	servo: servo {
+        compatible = "my-servo";
+        pwms = <&pwm1 1 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+        /* RS2 MG/BB modelcraft */ 
+        min-pulse = <PWM_USEC(540)>;
+        max-pulse = <PWM_USEC(2470)>;
+    };
+
+};
+
+&pwm1 {
+	status = "okay";
+};
+
+&timers1 {
+	status = "okay";
+    /* <err> pwm_stm32: Cannot set PWM output, value exceeds 16-bit timer */
+	st,prescaler = <100>;
+};

@@ -66,8 +66,16 @@ TARGET: stm32f1x.cpu - Not halted
 ```
 Press and hold the reset button while openocd is trying to connect.
 
+## Device tree hierarchy STM32 "bluepill"
+dts/arm/st/f1/stm32f1.dtsi
+dts/arm/st/f1/stm32f103X8.dtsi
+boards/others/stm32_min_dev/stm32_min_dev.dts
+boards/others/stm32_min_dev/stm32_min_dev_stm32f103xb_blue.overlay
+
+
 ## References
 [1] https://docs.zephyrproject.org/latest/boards/others/stm32_min_dev/doc/index.html<br>
 [2] https://github.com/zephyrproject-rtos/docker-image<br>
 [3] https://www.blaess.fr/christophe/2024/10/15/zephir-os-et-raspberry-pico-premiere-prise-en-main/<br>
 [4] https://www.blaess.fr/christophe/2024/10/29/zephyr-os-2-application-personnalisee/<br>
+[5] https://edgenoon-ai.github.io/edge-devices/zephyr-PWM-servo/<br>
